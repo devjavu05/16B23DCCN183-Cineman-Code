@@ -1,0 +1,17 @@
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%@ page import="util.Html3,model.*" %>
+<% String ctx = request.getContextPath(); Object curUser = session.getAttribute("user"); %>
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title><%= Html3.esc(pageTitle) %> – CineMan</title>
+<link rel="stylesheet" href="<%= ctx %>/assets/style.css"></head>
+<body>
+<header class="top"><div class="in">
+  <a class="logo" href="<%= ctx %>/index.jsp">Cine<b>Man</b></a>
+  <span class="who">
+  <% if (curUser instanceof Manager3) { %>Quản lí: <%= Html3.esc(((Manager3) curUser).getFullName()) %> · <a id="subLogout" href="<%= ctx %>/logout">Đăng xuất</a>
+  <% } else if (curUser instanceof Member3) { %>Thành viên: <%= Html3.esc(((Member3) curUser).getCustomer().getFullName()) %> · <a id="subLogout" href="<%= ctx %>/logout">Đăng xuất</a>
+  <% } else { %>Khách · <a href="<%= ctx %>/login">Đăng nhập</a><% } %>
+  </span>
+</div></header>
+<main>

@@ -1,0 +1,44 @@
+:root{--bg:#f5f6fa;--ink:#1f2430;--muted:#6b7280;--brand:#c8102e;--brand-d:#9c0c24;--card:#fff;--line:#e5e7eb;--ok:#0f7b45;--okbg:#e7f6ee;--err:#b42318;--errbg:#fdecea;--nav:#14171f}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+header.top{background:var(--nav);color:#fff}
+header.top .in{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-weight:800;letter-spacing:.5px;font-size:20px;color:#fff;text-decoration:none}.logo b{color:var(--brand)}
+header.top .who{font-size:13px;color:#cbd2dc}
+main{max-width:1080px;margin:28px auto;padding:0 20px}
+h1{font-size:24px;margin:0 0 4px}.sub{color:var(--muted);margin:0 0 20px}
+.crumbs{font-size:13px;color:var(--muted);margin-bottom:14px}.crumbs a{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.tile{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;text-decoration:none;color:var(--ink);transition:.15s}
+.tile:hover{border-color:var(--brand);box-shadow:0 4px 14px rgba(0,0,0,.07)}
+.tile h3{margin:0 0 6px;font-size:17px}.tile p{margin:0;color:var(--muted);font-size:14px}
+.tile.off{opacity:.55;pointer-events:none}.tag{display:inline-block;font-size:11px;background:#eef0f4;color:#555;border-radius:99px;padding:2px 8px;margin-top:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px}
+.card.narrow{max-width:560px}
+label{display:block;font-weight:600;font-size:14px;margin:14px 0 6px}
+input[type=text],input[type=email],input[type=password],input[type=date],select{width:100%;padding:10px 12px;border:1px solid #cfd4dc;border-radius:8px;font-size:15px;background:#fff}
+input:focus,select:focus{outline:2px solid #f3b6c0;border-color:var(--brand)}
+.req{color:var(--brand)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.btn{display:inline-block;background:var(--brand);color:#fff;border:0;border-radius:8px;padding:10px 20px;font-size:15px;font-weight:600;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--brand-d)}.btn.ghost{background:#fff;color:var(--ink);border:1px solid #cfd4dc}.btn.ghost:hover{background:#f1f2f5}
+.actions{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.msg{border-radius:8px;padding:10px 14px;margin:0 0 14px;font-size:14px}
+.msg.err{background:var(--errbg);color:var(--err);border:1px solid #f4b8b2}
+.msg.ok{background:var(--okbg);color:var(--ok);border:1px solid #b7e3cb}
+.msg.info{background:#eef4ff;color:#274690;border:1px solid #c9d8f7}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);font-size:14.5px}
+th{background:#f0f2f6;font-size:12.5px;text-transform:uppercase;letter-spacing:.4px;color:#4a5160}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:0}tbody tr:hover{background:#fafbfd}
+tfoot td{font-weight:700;background:#f7f8fb}
+a.link{color:var(--brand);font-weight:600;text-decoration:none}a.link:hover{text-decoration:underline}
+.bar{height:8px;background:#eceef2;border-radius:99px;min-width:90px;overflow:hidden;display:inline-block;width:90px;vertical-align:middle;margin-right:8px}
+.bar i{display:block;height:100%;background:var(--brand)}
+.cardmember{background:linear-gradient(135deg,#1f2430,#3a1f2a);color:#fff;border-radius:14px;padding:22px;max-width:380px;margin:16px 0}
+.cardmember .n{font-size:22px;letter-spacing:2px;font-weight:700;margin:14px 0}.cardmember small{color:#cbd2dc}
+.summary{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 16px}.pill{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 14px;font-size:14px}.pill b{font-size:16px}
+footer{max-width:1080px;margin:36px auto;padding:0 20px;color:var(--muted);font-size:12.5px}
+
+header.top .who a{color:#fff;text-decoration:underline}
